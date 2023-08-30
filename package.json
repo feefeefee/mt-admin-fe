@@ -1,0 +1,51 @@
+{
+  "name": "mt-admin",
+  "version": "1.0.0",
+  "description": "vue3 + TS + vite",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:eslint": "eslint --ext .js,.jsx,.vue,.ts,.tsx --fix --quiet ./",
+    "prepare": "husky install",
+    "lint": "npm run lint:eslint"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.41.0",
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@unocss/eslint-config": "^0.55.3",
+    "@unocss/reset": "^0.55.3",
+    "@unocss/transformer-directives": "^0.55.3",
+    "@vitejs/plugin-vue": "^4.3.4",
+    "eslint": "^8.48.0",
+    "eslint-define-config": "^1.23.0",
+    "eslint-plugin-vue": "^9.17.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "node-sass": "^9.0.0",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "typescript": "^5.2.2",
+    "unocss": "^0.55.3",
+    "vite": "^4.4.9",
+    "vite-plugin-eslint": "^1.8.1",
+    "vue-tsc": "^1.8.8"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts,jsx,tsx,.vue}": [
+      "npm run lint "
+    ]
+  }
+}
